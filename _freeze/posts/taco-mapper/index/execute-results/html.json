@@ -1,0 +1,14 @@
+{
+  "hash": "d7d7cdb803d6c601995eb99fad517489",
+  "result": {
+    "markdown": "---\ntitle: \"Taco Mapper\"\nauthor: \"bill olander\"\ndate: \"2023-12-01\"\ncategories: [shiny, map, api, tacos]\nimage: \"Tacos.jpg\"\n---\n\n\nMaking an interactive map of taquerias in Oaxaca so I can try them all.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

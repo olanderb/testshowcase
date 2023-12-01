@@ -1,0 +1,13 @@
+---
+title: "Taco Mapper"
+author: "bill olander"
+date: "2023-12-01"
+categories: [shiny, map, api, tacos]
+image: "Tacos.jpg"
+---
+
+Making an interactive map of taquerias in Oaxaca so I can try them all.
+
+```{r}
+1 + 1
+```

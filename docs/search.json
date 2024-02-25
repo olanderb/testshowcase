@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "show case",
     "section": "",
-    "text": "Taco Mapper\n\n\n\n\n\n\n\nshiny\n\n\nmap\n\n\napi\n\n\ntacos\n\n\n\n\n\n\n\n\n\n\n\nDec 1, 2023\n\n\nbill olander\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 28, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Humanitarian Response Plan 2023\n\n\n\n\n\n\n\ntable\n\n\napi\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2024\n\n\nBill Olander\n\n\n\n\n\n\n  \n\n\n\n\nTaco Mapper\n\n\n\n\n\n\n\nshiny\n\n\nmap\n\n\napi\n\n\ntacos\n\n\n\n\n\n\n\n\n\n\n\nDec 1, 2023\n\n\nbill olander\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,12 @@
     "title": "Taco Mapper",
     "section": "",
     "text": "Making an interactive map of taquerias in Oaxaca so I can try them all.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/hrp_2023/index.html",
+    "href": "posts/hrp_2023/index.html",
+    "title": "Humanitarian Response Plan 2023",
+    "section": "",
+    "text": "Here I recreate the table showing Funding of 2023 Response Plans in the Global Humanitarian Overview 2024 using the R packages reactable and htmltools .\n\n\nThe main steps (in the code below) are:\n\nConnect the Humanitarian Data Exchange to download the funding data\nImport the data, perform so easy exploration and make minor reformatting of the data\nCreate a reactable and spend a lot of hours tweaking css to make the following table.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n\n\nHumanitarian Response Plans 2023\nFunding and Coverage Overview"
   }
 ]

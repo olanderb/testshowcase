@@ -5,10 +5,10 @@ date: "2024-01-15"
 categories: [table, api]
 format:
   html:
+    css: styles.css
     code-fold: true
     code-summary: "Show the code"
-    toc: true
-    toc-depth: 2
+
 execute:
   warning: false
   
@@ -16,15 +16,15 @@ execute:
 
 ## Background
 
-Here I recreate the table showing <Funding of 2023 Response Plans> in the [Global Humanitarian Overview 2024](https://reliefweb.int/report/world/global-humanitarian-overview-2024-enarfres) using the R packages *reactable* and *htmltools .*
+Here I recreate the table showing *Funding of 2023 Response Plans* in the [Global Humanitarian Overview 2024](https://reliefweb.int/report/world/global-humanitarian-overview-2024-enarfres) using the R packages *reactable* and *htmltools*
 
 ![](images/clipboard-2147009209.png)
 
 ## Steps
 
-The main steps (in the code below) are:
+The main steps were:
 
-1.   Connect the Humanitarian Data Exchange to download the funding data
+Connect the Humanitarian Data Exchange to download the funding data
 ```{r download funding}
 # URL of the Excel file on HDX
 url <- "https://data.humdata.org/dataset/6cb35657-975e-46a0-99a7-a558eddb924f/resource/28be64d3-adaf-4f61-887c-87a8b5d9c625/download/section3_plan_tables_2024-n.xlsx"
@@ -34,7 +34,7 @@ destfile <- "section3_plan_tables_2024-n.xlsx"
 download.file(url, destfile, mode="wb")
 ```
 
-2.   Import the data, perform some easy exploration (because the data is clean and simple) and do a little reformatting of the data
+Import the data, perform some easy exploration (because the data is clean and simple) and do a little reformatting of the data
 ```{r import and format}
 library(readxl)
 library(dplyr)
@@ -54,7 +54,7 @@ data <- data %>% filter(`Plan type` == "HRP")
 ```
 
 
-3.   Create a *reactable* and spend a lot of hours trying to tweak html and css to make the table below.
+Create a *reactable* and spend a lot of hours trying to tweak html and css to make the table below
 ```{r reactable}
 library(reactable)
 library(htmltools)
@@ -95,6 +95,8 @@ max_values <- sapply(data[, c("People in need", "People targeted", "Requirements
 react_table <- reactable(
   data,
   pagination = FALSE,
+  defaultPageSize = nrow(data),  # Set page size to the number of rows in your data
+  width = '100%',
   columns = list(
     Plan = colDef(
       defaultSortOrder = "asc",
@@ -173,6 +175,10 @@ complete_table_with_title <- tagList(
 
 
 ## Voila 
+
+*make sure to click on the column name to sort !* 
+
+*i'm not happy with sizing and still cant get it to fully fit - working on it !* 
 
 ```{r show, echo=FALSE}
 browsable(complete_table_with_title)

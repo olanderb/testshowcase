@@ -1,0 +1,4 @@
+/* styles.css */
+.reactable {
+  overflow-x: auto; /* Allows horizontal scrolling if the table is wider than the screen */
+}
